@@ -23,9 +23,19 @@
             padding: 16px;
         }
 
+        article{
+            display: flex;
+            
+        }
+
+        .artigo-autor{
+            font-weight: bold;
+        }
+
+
         img{
-            width: 500px;
-            height: 250px;
+            width: 800px;
+            height: 400px;
         }
 
 
@@ -41,14 +51,35 @@
 
       <main>
           <h2>Minha primeira noticia</h2>
-          <p>Por Kamily M. De Pieri</p>
+          <p class="artigo-autor">Por Kamily M. De Pieri</p>
           <p>O Colégio Rural Estadual de Pinhalzinho, fica em uma comunidade do interior da cidade de Rio Bonito do Iguaçu no Paraná. Entre os
               trabalos desenvolvidos, destaca-se os indices alcançados nos últimos anos com o IDEB, Prova Paraná e também a aprovação de aluno formados e 
               diversos vestibulares do Estado.</p>
               <img src="download.png" alt="É a imagem de um logo do Colegio Pinhalzinho, que contem um pinheiro
               e cores claras e escuras, e tambpem um campo">
 
+              <button> ❤️<span>0</span></button>
+              <button><span></span></button>
+
+              <article>
+                <img src="" alt="">
+
+                <div>
+                    <h2>Meu segundo post</h2>
+                    <p class="artigo-autot">Por Kamily M. De Pieri</p>
+                    <p>Aqui vou dar dicas de estudos para quem está se preparando para Enem e vestibulares</p>
+                    <button>❤️<span>0</span></button>
+                    <button><span></span></button>
+
+                </div>
+              </article>
       </main>
 
 </body>
+     <script>
+        const botoes = document.querySelector("button");
+        botoes.forEach(function(botao))
+     </script>
+
+
 </html>
