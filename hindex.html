@@ -8,16 +8,16 @@
     <style>
 
         header{
-            background-color: #183c63;
-            color: #FFFFFF;
+            background-color: #145221;
+            color: #ffffff;
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
             padding: 16px;
         }
         main{
-            background-color: #FFFFFF;
-            color: #183c63;
+            background-color: #8fbd9a;
+            color: #003a08;
             max-width: 800px;
             margin: 0 auto;
             padding: 16px;
@@ -30,13 +30,20 @@
 
 
         img{
-            width: 400px;
-            height: 200px;
+            width: 350px;
+            height: 125%;
         }
 
         .artigo-autor{
             font-weight: bold;
+    
         }
+        
+        .retrato{
+            width: 75%;
+        }
+
+       
 
 
 
@@ -50,10 +57,10 @@
       </Header>
 
       <main>
-        <img src="download.png" alt="É a imagem de um logo do Colegio Pinhalzinho, que contem um pinheiro
+        <img class="foto" src="imgP.png" alt="É a imagem de um logo do Colegio Pinhalzinho, que contem um pinheiro
         e cores claras e escuras, e tambpem um campo">
           <h2>Minha primeira noticia</h2>
-          <p class="artigo-autor">Por Kamily M. De Pieri</p>
+          <p class="artigo-autor">Por Kamily Moreira De Pieri</p>
           <p>O Colégio Rural Estadual de Pinhalzinho, fica em uma comunidade do interior da cidade de Rio Bonito do Iguaçu no Paraná. Entre os
               trabalos desenvolvidos, destaca-se os indices alcançados nos últimos anos com o IDEB, Prova Paraná e também a aprovação de aluno formados e 
               diversos vestibulares do Estado.</p>
@@ -63,11 +70,11 @@
               <button>👍🏽<span>0</span></button>
 
               <article>
-                <img src="ideb.jpg" alt="">
+                <img class="retrato" src="download.png" alt="">
 
                 <div>
                     <h2>Meu segundo post</h2>
-                    <p class="artigo-autot">Por Kamily M. De Pieri</p>
+                    <p class="artigo-autot">Por Kamily Moreira De Pieri</p>
                     <p>Aqui vou dar dicas de estudos para quem está se preparando para Enem e vestibulares</p>
                     <button>❤️<span>0</span></button>
                     <button>👍🏽<span>0</span></button>
@@ -78,17 +85,17 @@
 
 </body>
      <script>
-        const botoes = document.querySelector("button");
+        const botoes = document.querySelectorAll("button");
         botoes.forEach(function(botao) {
             let curtiu = false;
-            botao.addEvenlistener("click",botaoClicado);
+            botao.addEventListener("click",botaoClicado);
             function botaoClicado() {
                 console.log("fui clicado");
-                let texto = botao.querySelectorAll("span");
-                if(curtiu === false) {
+                let texto = botao.querySelector("span");
+                if(curtiu === false){
                     texto.textContent++;
                     curtiu = true;
-                } else {
+                } else{
                     texto.textContent--;
                     curtiu = false;
                 }
